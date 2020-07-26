@@ -1,26 +1,45 @@
 #about {
   
+  @-webkit-keyframes slide-from-right {
+    0% {-webkit-transform: translateX(150%);transform: translateX(150%)}
+    100% { -webkit-transform: translateX(0%); transform: translateX(0%); }
+  }
+  
   @keyframes slide-from-right {
-    0% {transform: translateX(150%)}
-    100% { transform: translateX(0%); }
+    0% {-webkit-transform: translateX(150%);transform: translateX(150%)}
+    100% { -webkit-transform: translateX(0%); transform: translateX(0%); }
   }
   
   .biography-title {
-    animation: slide-from-right 1s cubic-bezier(0.87, 0, 0.13, 1) forwards;
+    -webkit-animation: slide-from-right 1s cubic-bezier(0.87, 0, 0.13, 1) forwards;
+            animation: slide-from-right 1s cubic-bezier(0.87, 0, 0.13, 1) forwards;
   }
 
   .main-content {
-    animation: slide-from-right 1s cubic-bezier(0.87, 0, 0.13, 1) forwards;
-    animation-delay: 100ms;
+    -webkit-animation: slide-from-right 1s cubic-bezier(0.87, 0, 0.13, 1) forwards;
+            animation: slide-from-right 1s cubic-bezier(0.87, 0, 0.13, 1) forwards;
+    -webkit-animation-delay: 100ms;
+            animation-delay: 100ms;
+  }
+  
+  @-webkit-keyframes slide-from-left {
+    0% {-webkit-transform: translateX(-150%);transform: translateX(-150%)}
+    100% { -webkit-transform: translateX(0%); transform: translateX(0%); }
   }
   
   @keyframes slide-from-left {
-    0% {transform: translateX(-150%)}
-    100% { transform: translateX(0%); }
+    0% {-webkit-transform: translateX(-150%);transform: translateX(-150%)}
+    100% { -webkit-transform: translateX(0%); transform: translateX(0%); }
   }
   
   #profile {
-    animation: slide-from-left 1s cubic-bezier(0.87, 0, 0.13, 1) forwards;
+    -webkit-animation: slide-from-left 1s cubic-bezier(0.87, 0, 0.13, 1) forwards;
+            animation: slide-from-left 1s cubic-bezier(0.87, 0, 0.13, 1) forwards;
+  }
+  
+  @-webkit-keyframes fade-in {
+    0% {opacity: 0}
+    100% {opacity: 1}
   }
   
   @keyframes fade-in {
@@ -30,13 +49,17 @@
   
   .interests-div {
     opacity: 0;
-    animation: fade-in 1s forwards;
-    animation-delay: 1s;
+    -webkit-animation: fade-in 1s forwards;
+            animation: fade-in 1s forwards;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
   }
   
   .education-div {
     opacity: 0;
-    animation: fade-in 1s forwards;
-    animation-delay: 1.5s;
+    -webkit-animation: fade-in 1s forwards;
+            animation: fade-in 1s forwards;
+    -webkit-animation-delay: 1.5s;
+            animation-delay: 1.5s;
   }
 }
